@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pg_isready)",
+      "Bash(redis-cli ping *)",
+      "Bash(.venv/bin/python --version)",
+      "Bash(psql -U postgres -l)",
+      "Bash(psql -U user -d buytosell -c \"SELECT 1;\")",
+      "Bash(psql -l)",
+      "Bash(.venv/bin/pip list *)",
+      "Bash(.venv/bin/python -c \"import fastapi, uvicorn, sqlalchemy, passlib, jose, aiofiles, slowapi, redis; print\\('Core OK'\\)\")",
+      "Bash(python3 -c \"import fastapi, uvicorn, sqlalchemy, passlib, jose, aiofiles, slowapi, redis, loguru; print\\('All OK'\\)\")",
+      "Bash(python3 -c \"import asyncpg; print\\('asyncpg OK'\\)\")",
+      "Bash(python3 -c \"import aiosqlite; print\\('aiosqlite OK'\\)\")",
+      "Bash(python3 -c \"import psycopg2; print\\('psycopg2 OK'\\)\")",
+      "Bash(python3 -m pip install aiosqlite psycopg2-binary)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 *)",
+      "Bash(python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(curl -s http://localhost:8000/api/v1/auth/register -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"test@example.com\",\"password\":\"testpass123\",\"role\":\"seller\"}')",
+      "Bash(pkill -f \"uvicorn\")",
+      "Bash(python3 -m uvicorn app.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(pkill -f \"uvicorn app.main\")",
+      "Bash(curl -s http://localhost:8000/api/v1/auth/register -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"admin@test.com\",\"password\":\"admin1234\",\"role\":\"admin\"}')",
+      "Bash(curl -s http://localhost:8000/api/v1/auth/login -X POST -H \"Content-Type: application/json\" -d '{\"email\":\"admin@test.com\",\"password\":\"admin1234\"}')",
+      "Bash(git -C /home/daemon-a/Documents/Fast_API/Projects/BuyToSell rev-parse --show-toplevel)",
+      "Bash(git -C /home/daemon-a/Documents/Fast_API/Projects rev-parse --show-toplevel)",
+      "Bash(git -C /home/daemon-a/Documents/Fast_API/Projects status --short)",
+      "Bash(git -C /home/daemon-a/Documents/Fast_API/Projects diff --stat HEAD)",
+      "Bash(git *)"
+    ]
+  }
+}
